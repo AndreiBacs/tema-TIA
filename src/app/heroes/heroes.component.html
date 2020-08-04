@@ -3,8 +3,16 @@
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
+      <span class="badge">{{hero.id}}</span> {{hero.name}} 
     </a>
+    
   </li>
 </ul>
+
+<div>
+  <label for="heroName">Hero name:<input #heroName/></label>
+  <button (click)="add(heroName.value); heroName.value=''">
+      ADD
+  </button>
+</div>
 
