@@ -1,29 +1,25 @@
-<h2>My Heroes</h2>
+<div class="container">
+  <h2>My Heroes</h2>
 
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let hero of heroes">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10 ">
-          <a routerLink="/detail/{{hero.id}}">
-            <span class="badge">{{hero.id}}</span> {{hero.name}}
-          </a>
-        </div>
-        <div class="col-sm-2">
-          <button class="btn btn-danger" title="delete hero" (click)="delete(hero)">x</button>
-        </div>
-      </div>
-    </div>
-  </li>
-</ul>
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let hero of heroes">
+      <span class="badge badge-primary">{{hero.id}}</span>
+      <a routerLink="/detail/{{hero.id}}">
+        {{hero.name}}
+      </a>
+      <button class="btn btn-danger" title="delete hero" (click)="delete(hero)">x</button>
+    </li>
+  </ul>
+</div>
 
+<div class="containerp p-3">
 <div class="form-inline">
-  <div class="form-group mb-2">
+  <div class="form-group mx-auto">
     <label for="heroName">Hero name</label>
   </div>
-  <div class="form-group mx-sm-3 mb-2">
+  <div class="form-group mx-auto">
     <input id="heroName" #heroName />
   </div>
-  <button class="btn btn-success mb-2" (click)="add(heroName.value); heroName.value=''">ADD</button>
-
+  <button class="btn btn-success mx-auto" (click)="add(heroName.value); heroName.value=''">ADD</button>
+</div>
 </div>
