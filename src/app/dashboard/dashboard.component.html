@@ -2,11 +2,19 @@
 
 <ul class="nav nav-pills">
   <li class="nav-item" *ngFor="let hero of heroes">
-    <a class="nav-link" routerLink="/detail/{{hero.id}}">
-      <div class="btn btn-primary"> {{hero.name}}</div>
-    </a>
+    <div class="card ">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{hero.name}}</h5>
+        <p class="card-text">{{hero.description}}</p>
+        <a routerLink="/detail/{{hero.id}}" class="btn btn-primary">
+          <div class="btn btn-primary">Check info for {{hero.name}}</div>
+        </a>
+      </div>
+    </div>
   </li>
 </ul>
+
 
 
 <app-hero-search></app-hero-search>

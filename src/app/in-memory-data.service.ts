@@ -8,18 +8,18 @@ import { Hero } from './hero';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 11, name: 'Dr Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 11, name: 'Dr Nice', description: 'text' },
+      { id: 12, name: 'Narco', description: 'text' },
+      { id: 13, name: 'Bombasto', description: 'text' },
+      { id: 14, name: 'Celeritas', description: 'text' },
+      { id: 15, name: 'Magneta', description: 'text' },
+      { id: 16, name: 'RubberMan', description: 'text' },
+      { id: 17, name: 'Dynama', description: 'text' },
+      { id: 18, name: 'Dr IQ', description: 'text' },
+      { id: 19, name: 'Magma', description: 'text' },
+      { id: 20, name: 'Tornado', description: 'text' }
     ];
-    return {heroes};
+    return { heroes };
   }
 
   // Overrides the genId method to ensure that a hero always has an id.
