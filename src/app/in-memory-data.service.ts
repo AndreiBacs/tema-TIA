@@ -8,16 +8,16 @@ import { Hero } from './hero';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 1, name: 'Dr Nice', description: 'text' },
-      { id: 2, name: 'Narco', description: 'text' },
-      { id: 3, name: 'Bombasto', description: 'text' },
-      { id: 4, name: 'Celeritas', description: 'text' },
-      { id: 5, name: 'Magneta', description: 'text' },
-      { id: 6, name: 'RubberMan', description: 'text' },
-      { id: 7, name: 'Dynama', description: 'text' },
-      { id: 8, name: 'Dr IQ', description: 'text' },
-      { id: 9, name: 'Magma', description: 'text' },
-      { id: 10, name: 'Tornado', description: 'text' }
+      { id: 1, name: 'Superman', description: 'text', img: '../../assets/superman.png' },
+      { id: 2, name: 'Batman', description: 'text', img: '../../assets/batman.png' },
+      { id: 3, name: 'Spiderman', description: 'text', img: '../../assets/spiderman.png' },
+      { id: 4, name: 'Wolverine', description: 'text', img: '../../assets/wolverine.png' },
+      { id: 5, name: 'Magneta', description: 'text', img: '' },
+      { id: 6, name: 'RubberMan', description: 'text', img: '' },
+      { id: 7, name: 'Dynama', description: 'text', img: '' },
+      { id: 8, name: 'Dr IQ', description: 'text', img: '' },
+      { id: 9, name: 'Magma', description: 'text', img: '' },
+      { id: 10, name: 'Tornado', description: 'text', img: '' }
     ];
     return { heroes };
   }
