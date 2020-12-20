@@ -4,12 +4,15 @@
             Hero Search
         </label>
     </h4>
-    <input class="form-control" placeholder="Seach Hero" #searchBox id="search-box" (input)="search(searchBox.value)" />
-    <ul class="list-group">
-        <li class="list-group-item" *ngFor="let hero of heroes$ | async">
-            <a routerLink="/detail/{{hero.id}}">
-              <div>{{ hero.name }}</div>  
-            </a>
-        </li>
-    </ul>
+    <div class="col-sm-10">
+        <input class="form-control" placeholder="Seach Hero" #searchBox id="search-box"
+            (input)="search(searchBox.value)" />
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let hero of heroes$ | async">
+                <a routerLink="/detail/{{hero.id}}">
+                    <div>{{ hero.name }}</div>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
