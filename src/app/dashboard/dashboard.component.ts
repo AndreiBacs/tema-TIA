@@ -18,8 +18,11 @@ export class DashboardComponent implements OnInit {
   }
   
   getHeroes(): void {
+    var a = Math.floor(Math.random() * 7) ;
+    var b = a + 4;
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(0, 4));
+      .subscribe(heroes => this.heroes = heroes.slice(a, b));
   }
 
+  
 }

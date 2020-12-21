@@ -8,16 +8,16 @@ import { Hero } from './hero';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 1, name: 'Superman', description: 'text', img: '../../assets/superman.png' },
+      { id: 1, name: 'Superman', description: 'text', img: '../../assets/superman_2.png' },
       { id: 2, name: 'Batman', description: 'text', img: '../../assets/batman.png' },
       { id: 3, name: 'Spiderman', description: 'text', img: '../../assets/spiderman.png' },
       { id: 4, name: 'Wolverine', description: 'text', img: '../../assets/wolverine.png' },
-      { id: 5, name: 'Magneta', description: 'text', img: '' },
-      { id: 6, name: 'RubberMan', description: 'text', img: '' },
-      { id: 7, name: 'Dynama', description: 'text', img: '' },
-      { id: 8, name: 'Dr IQ', description: 'text', img: '' },
-      { id: 9, name: 'Magma', description: 'text', img: '' },
-      { id: 10, name: 'Tornado', description: 'text', img: '' }
+      { id: 5, name: 'Deadpool', description: 'text', img: '../../assets/deadpoolio.png' },
+      { id: 6, name: 'Green Lantern', description: 'text', img: '../../assets/lantern.png' },
+      { id: 7, name: 'Flash', description: 'text', img: '../../assets/flash.png' },
+      { id: 8, name: 'Jedi', description: 'text', img: '../../assets/jedi.png' },
+      { id: 9, name: 'Wonder Woman', description: 'text', img: '../../assets/ww2.png' },
+      { id: 10, name: 'Minutemen', description: 'text', img: '../../assets/watch.png' }
     ];
     return { heroes };
   }
