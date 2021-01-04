@@ -15,12 +15,26 @@
     <div class="form-group row">
         <label for="name" class="col-sm-2 col-form-label">Description:</label>
         <div class="col-sm-8">
-            <textarea  class="form-control" [(ngModel)]="hero.description" placeholder="description" id="description"></textarea>
-        </div>
-        <div class="col-sm-2 ">
-            <button class="btn btn-success" (click)="save()" type="button">Save</button>
+            <textarea class="form-control" [(ngModel)]="hero.description" placeholder="description"
+                id="description"></textarea>
         </div>
     </div>
-
+    <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Logo:</label>
+        <div class="col-sm-4">
+            <input class="form-control" [(ngModel)]="hero.img" placeholder="name" id="name" />
+            <input type="file" (change)="onFileChanged($event)">
+        </div>
+        <div>
+            <img class="img-thumbnail" src="{{hero.img}}" alt="Card image cap" height="250" width="250">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <button class="btn btn-success" (click)="save()" type="button">Save</button>
+        </div>
+        <div class="col-4">
+            <button class="btn btn-danger " (click)="goBack()" type="button"> Go back</button>
+        </div>
+    </div>
 </div>
-<button class="btn btn-danger " (click)="goBack()" type="button"> Go back</button>

@@ -17,8 +17,8 @@ import { Observable } from 'rxjs';
 
 export class HeroDetailComponent implements OnInit {
 
-  @Input()
-  hero: Hero;
+  @Input() hero: Hero;
+  selectedFile: File;
 
   constructor(
     private route: ActivatedRoute,
@@ -38,6 +38,10 @@ export class HeroDetailComponent implements OnInit {
   }
   save(): void {
     this.heroService.updateHero(this.hero).subscribe(() => this.goBack());
+  }
+  onFileChanged(event){
+    this.selectedFile = event.target.files[0];
+    this.hero.img="../../assets/"+this.selectedFile.name
   }
  
   

@@ -5,9 +5,7 @@ import { catchError, map, tap } from "rxjs/operators";
 import { Observable, of } from 'rxjs';
 
 import { Hero } from './hero';
-import { HEROES } from './mock-heroes';
 import { MessageService } from './message.service';
-import { IfStmt } from '@angular/compiler';
 
 @Injectable({ providedIn: 'root' })
 export class HeroService {
